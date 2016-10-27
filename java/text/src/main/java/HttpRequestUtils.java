@@ -1,4 +1,6 @@
+package com.shumei;
 /**
+ *
  * Created by Administrator on 2016/10/20.
  */
 
@@ -8,6 +10,8 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
@@ -20,8 +24,8 @@ public class HttpRequestUtils {
      * @param jsonParam 参数
      * @return
      */
-    public static JSONObject httpPost(String url,JSONObject jsonParam){
-        return httpPost(url, jsonParam, false);
+    public static JSONObject httpPost(String url,JSONObject jsonParam, int conntimeout, int readtimeout){
+        return httpPost(url, jsonParam,conntimeout, readtimeout, false);
     }
 
     /**
@@ -31,9 +35,12 @@ public class HttpRequestUtils {
      * @param noNeedResponse    不需要返回结果
      * @return
      */
-    public static JSONObject httpPost(String url,JSONObject jsonParam, boolean noNeedResponse){
+    public static JSONObject httpPost(String url,JSONObject jsonParam, int conntimeout, int readtimeout, boolean noNeedResponse){
+        BasicHttpParams httpParams = new BasicHttpParams();  
+        HttpConnectionParams.setConnectionTimeout(httpParams, conntimeout);  
+        HttpConnectionParams.setSoTimeout(httpParams, readtimeout);
         //post请求返回结果
-        DefaultHttpClient httpClient = new DefaultHttpClient();
+        DefaultHttpClient httpClient = new DefaultHttpClient(httpParams);
         JSONObject jsonResult = null;
         HttpPost method = new HttpPost(url);
         try {
