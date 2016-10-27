@@ -1,6 +1,6 @@
 package com.shumei;
-import net.sf.json.JSONObject;
 
+import com.alibaba.fastjson.JSON;
 import java.util.HashMap;
 
 public class Text {
@@ -32,21 +32,16 @@ public class Text {
         userData.put("accessKey", this.accessKey);
         userData.put("type", this.type);
         userData.put("data", data);
-        JSONObject json = JSONObject.fromObject(userData);
-        JSONObject result = HttpRequestUtils.httpPost("http://api.fengkongcloud.com/v2/saas/anti_fraud/text", json, this.connTimeOut, this.readTimeOut);
-        if (result == null) {
-             throw new Exception("result is null");
-        }
-        return result.toString();
+        String json = JSON.toJSONString(userData);
+        String result = HttpRequestUtils.httpPost("http://api.fengkongcloud.com/v2/saas/anti_fraud/text", json, this.connTimeOut, this.readTimeOut);
+        return result;
     }
 
-    /*
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         Text t = new Text("Qp8XPf4Y6BZPYDjGBmF2");
         HashMap<String, Object> data = new HashMap<String, Object>();
         data.put("tokenId","tokei");
         data.put("text", "iphone 7");
         System.out.println(t.invoke(data));
     }
-    */
 }
