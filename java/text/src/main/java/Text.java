@@ -3,30 +3,50 @@ import net.sf.json.JSONObject;
 
 import java.util.HashMap;
 
-/**
- * Created by Administrator on 2016/10/20.
- */
-
 public class Text {
     private String accessKey;
     private String type;
-    private int conntimeout;
-    private int readtimeout;
-    public Text(String accessKey, String type, int conntimeout, int readtimeout) {
+    private int connTimeOut;
+    private int readTimeOut;
+    public Text(String accessKey) {
         this.accessKey = accessKey;
-        this.type = type;
-        this.conntimeout = conntimeout;
-        this.readtimeout = readtimeout;
+        this.type = "ZHIBO";
+        this.connTimeOut = 1000;
+        this.readTimeOut = 1000;
     }
-    public String invoke(HashMap<String, Object> data) {
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setConnTimeOut(int connTimeOut) {
+        this.connTimeOut = connTimeOut;
+    }
+
+    public void setReadTimeOut(int readTimeOut) {
+        this.readTimeOut = readTimeOut;
+    }
+
+    public String invoke(HashMap<String, Object> data) throws Exception{
         HashMap<String, Object> userData = new HashMap<String, Object>();
-        //please set your own accessKey
         userData.put("accessKey", this.accessKey);
         userData.put("type", this.type);
         userData.put("data", data);
         JSONObject json = JSONObject.fromObject(userData);
-        JSONObject result = HttpRequestUtils.httpPost("http://api.fengkongcloud.com/v2/saas/anti_fraud/text", json, this.conntimeout, this.readtimeout);
-        //System.out.println(result.toString());
+        JSONObject result = HttpRequestUtils.httpPost("http://api.fengkongcloud.com/v2/saas/anti_fraud/text", json, this.connTimeOut, this.readTimeOut);
+        if (result == null) {
+             throw new Exception("result is null");
+        }
         return result.toString();
     }
+
+    /*
+    public static void main(String[] args) throws Exception{
+        Text t = new Text("Qp8XPf4Y6BZPYDjGBmF2");
+        HashMap<String, Object> data = new HashMap<String, Object>();
+        data.put("tokenId","tokei");
+        data.put("text", "iphone 7");
+        System.out.println(t.invoke(data));
+    }
+    */
 }
