@@ -1,12 +1,13 @@
-package com.shumei;
+/**
+ * Created by Administrator on 2016/10/20.
+ */
 
+import net.sf.json.JSONObject;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
@@ -15,49 +16,85 @@ import java.net.URLDecoder;
 public class HttpRequestUtils {
     /**
      * httpPost
-     * @param url  è·¯å¾„
-     * @param jsonParam å‚æ•°
+     * @param url  Â·¾¶
+     * @param jsonParam ²ÎÊı
      * @return
      */
-    public static String httpPost(String url, String jsonParam, int conntimeout, int readtimeout) throws Exception{
-        return httpPost(url, jsonParam, conntimeout, readtimeout, false);
+    public static JSONObject httpPost(String url,JSONObject jsonParam){
+        return httpPost(url, jsonParam, false);
     }
 
     /**
-     * postè¯·æ±‚
-     * @param url         urlåœ°å€
-     * @param jsonParam     å‚æ•°
-     * @param noNeedResponse    ä¸éœ€è¦è¿”å›ç»“æœ
+     * postÇëÇó
+     * @param url         urlµØÖ·
+     * @param jsonParam     ²ÎÊı
+     * @param noNeedResponse    ²»ĞèÒª·µ»Ø½á¹û
      * @return
      */
-    public static String httpPost(String url,String jsonParam, int conntimeout, int readtimeout, boolean noNeedResponse) throws Exception{
-        BasicHttpParams httpParams = new BasicHttpParams();  
-        HttpConnectionParams.setConnectionTimeout(httpParams, conntimeout);  
-        HttpConnectionParams.setSoTimeout(httpParams, readtimeout);
-        //postè¯·æ±‚è¿”å›ç»“æœ
-        DefaultHttpClient httpClient = new DefaultHttpClient(httpParams);
+    public static JSONObject httpPost(String url,JSONObject jsonParam, boolean noNeedResponse){
+        //postÇëÇó·µ»Ø½á¹û
+        DefaultHttpClient httpClient = new DefaultHttpClient();
+        JSONObject jsonResult = null;
         HttpPost method = new HttpPost(url);
-        if (null != jsonParam) {
-            //è§£å†³ä¸­æ–‡ä¹±ç é—®é¢˜
-            StringEntity entity = new StringEntity(jsonParam, "utf-8");
-            entity.setContentEncoding("UTF-8");
-            entity.setContentType("application/json");
-            method.setEntity(entity);
-        }
-        HttpResponse result = httpClient.execute(method);
-        url = URLDecoder.decode(url, "UTF-8");
-        /**è¯·æ±‚å‘é€æˆåŠŸï¼Œå¹¶å¾—åˆ°å“åº”**/
-        String str = "";
-        if (result.getStatusLine().getStatusCode() == 200) {
-            /**è¯»å–æœåŠ¡å™¨è¿”å›è¿‡æ¥çš„jsonå­—ç¬¦ä¸²æ•°æ®**/
-            str = EntityUtils.toString(result.getEntity());
-            if (noNeedResponse) {
-                return null;
+        try {
+            if (null != jsonParam) {
+                //½â¾öÖĞÎÄÂÒÂëÎÊÌâ
+                StringEntity entity = new StringEntity(jsonParam.toString(), "utf-8");
+                entity.setContentEncoding("UTF-8");
+                entity.setContentType("application/json");
+                method.setEntity(entity);
             }
-            /**æŠŠjsonå­—ç¬¦ä¸²è½¬æ¢æˆjsonå¯¹è±¡**/
-        }else{
-             throw new Exception("request failed: status code " + result.getStatusLine().getStatusCode());
+            HttpResponse result = httpClient.execute(method);
+            url = URLDecoder.decode(url, "UTF-8");
+            /**ÇëÇó·¢ËÍ³É¹¦£¬²¢µÃµ½ÏìÓ¦**/
+            if (result.getStatusLine().getStatusCode() == 200) {
+                String str = "";
+                try {
+                    /**¶ÁÈ¡·şÎñÆ÷·µ»Ø¹ıÀ´µÄjson×Ö·û´®Êı¾İ**/
+                    str = EntityUtils.toString(result.getEntity());
+                    if (noNeedResponse) {
+                        return null;
+                    }
+                    /**°Ñjson×Ö·û´®×ª»»³Éjson¶ÔÏó**/
+                    jsonResult = JSONObject.fromObject(str);
+                } catch (Exception e) {
+                    System.out.println("postÇëÇóÌá½»Ê§°Ü:" + url);
+                }
+            }
+        } catch (IOException e) {
+            System.out.println("postÇëÇóÌá½»Ê§°Ü:" + url);
         }
-        return str;
+        return jsonResult;
+    }
+
+
+    /**
+     * ·¢ËÍgetÇëÇó
+     * @param url    Â·¾¶
+     * @return
+     */
+    public static JSONObject httpGet(String url){
+        //getÇëÇó·µ»Ø½á¹û
+        JSONObject jsonResult = null;
+        try {
+            DefaultHttpClient client = new DefaultHttpClient();
+            //·¢ËÍgetÇëÇó
+            HttpGet request = new HttpGet(url);
+            HttpResponse response = client.execute(request);
+
+            /**ÇëÇó·¢ËÍ³É¹¦£¬²¢µÃµ½ÏìÓ¦**/
+            if (response.getStatusLine().getStatusCode() == 200) {
+                /**¶ÁÈ¡·şÎñÆ÷·µ»Ø¹ıÀ´µÄjson×Ö·û´®Êı¾İ**/
+                String strResult = EntityUtils.toString(response.getEntity());
+                /**°Ñjson×Ö·û´®×ª»»³Éjson¶ÔÏó**/
+                jsonResult = JSONObject.fromObject(strResult);
+                url = URLDecoder.decode(url, "UTF-8");
+            } else {
+                System.out.println("postÇëÇóÌá½»Ê§°Ü:" + url);
+            }
+        } catch (IOException e) {
+            System.out.println("postÇëÇóÌá½»Ê§°Ü:" + url);
+        }
+        return jsonResult;
     }
 }
