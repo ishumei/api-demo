@@ -35,7 +35,7 @@ func main() {
 	records := []SRecord{SRecord{"18512365786", 0, 1477050308, 100}}
 	rd := SPRIReqData{"18687082306", "866657020185815", records, contacts}
 	//set your own accessKey
-	smtr := ShumeiPRIRequest{"4Ky6AV4hE0pWLeG1bXNw", rd}
+	smtr := ShumeiPRIRequest{"XXXXXXXXXXXXXXXXXXXX", rd}
 	bys, _ := json.Marshal(&smtr)
 	header := map[string]string{"Content-Type": "application/json", "Content-Length": strconv.Itoa(len(string(bys)))}
 	response, err := hc.SendPostRequest(url, header, string(bys))

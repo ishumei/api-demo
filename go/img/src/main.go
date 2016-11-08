@@ -25,7 +25,7 @@ func main() {
 	}
 	imgStr := base64.StdEncoding.EncodeToString(imageContent)
 	//set your own accessKey
-	smtr := ShumeiImgRequest{"4Ky6AV4hE0pWLeG1bXNw", "AD", map[string]interface{}{"tokenId": "tokenId_test", "img": imgStr}}
+	smtr := ShumeiImgRequest{"XXXXXXXXXXXXXXXXXX", "AD", map[string]interface{}{"tokenId": "tokenId_test", "img": imgStr}}
 	bys, _ := json.Marshal(&smtr)
 	header := map[string]string{"Content-Type": "application/json", "Content-Length": strconv.Itoa(len(string(bys)))}
 	response, err := hc.SendPostRequest(url, header, string(bys))

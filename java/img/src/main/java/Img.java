@@ -12,7 +12,7 @@ import java.util.HashMap;
 public class Img {
     public static void main(String[] args) throws IOException {
         HashMap<String, Object> userData = new HashMap<String, Object>();
-        userData.put("accessKey", "4Ky6AV4hE0pWLeG1bXNw");
+        userData.put("accessKey", "XXXXXXXXXXXXXXX");
         userData.put("type","AD");
         HashMap<String, Object> data = new HashMap<String, Object>();
         data.put("tokenId", "tokenId_test");

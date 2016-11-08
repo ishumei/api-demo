@@ -16,7 +16,7 @@ func main() {
 	hc := httpclient.NewHttpClient(1e9, 1e9)
 	url := "https://finance-api.fengkongcloud.com/v2/finance/labels"
 	//set your own accessKey
-	smtr := ShumeiPLRequest{"4Ky6AV4hE0pWLeG1bXNw", map[string]interface{}{"phone": "18687082306"}}
+	smtr := ShumeiPLRequest{"XXXXXXXXXXXXXXXXXX", map[string]interface{}{"phone": "18687082306"}}
 	bys, _ := json.Marshal(&smtr)
 	header := map[string]string{"Content-Type": "application/json", "Content-Length": strconv.Itoa(len(string(bys)))}
 	response, err := hc.SendPostRequest(url, header, string(bys))

@@ -10,7 +10,7 @@ public class PhoneLabel {
     public static void main(String[] args) {
         HashMap<String, Object> userData = new HashMap<String, Object>();
         //please set your own accessKey
-        userData.put("accessKey", "4Ky6AV4hE0pWLeG1bXNw");
+        userData.put("accessKey", "XXXXXXXXXXXXXXXXXXX");
         HashMap<String, Object> data = new HashMap<String, Object>();
         data.put("phone", "18687082306");
         userData.put("data", data);
