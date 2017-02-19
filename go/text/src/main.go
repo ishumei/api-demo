@@ -14,9 +14,9 @@ type ShumeiTextRequest struct {
 }
 
 type ShumeiTextResult struct {
-	Code      int                    `json:"code"`
-	RiskLevel string                 `json:"riskLevel"`
-	Detail    map[string]interface{} `json:"detail"`
+	Code      int    `json:"code"`
+	RiskLevel string `json:"riskLevel"`
+	Detail    string `json:"detail"`
 }
 
 func main() {

@@ -10,6 +10,7 @@ $imgStr = base64_encode($imgContent);
 $postData = array("accessKey"=>"xxxxxxxxxxxxxxxxxxxx", "type"=>"AD", "data"=>array("tokenId"=>"tokenId_test", "img"=>$imgStr)); 
 $response = $mycurl->Post($postData);
 print_r($response);
+$resJson = json_decode($response, true);
 // success
 if ($resJson["code"] == 1100) {
     if ($resJson["riskLevel"] == "PASS") {

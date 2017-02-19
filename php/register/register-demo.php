@@ -8,6 +8,7 @@ $mycurl->url = "http://api.fengkongcloud.com/v2/saas/register";
 $postData = array("accessKey"=>"XXXXXXXXXXXXXXXXXXX", "data"=>array("registerTime"=>1477033674,"tokenId"=>"tokenId_test", "ip"=>"127.0.0.1")); 
 $response = $mycurl->Post($postData);
 print_r($response);
+$resJson = json_decode($response, true);
 // success
 if ($resJson["code"] == 1100) {
     if ($resJson["riskLevel"] == "PASS") {

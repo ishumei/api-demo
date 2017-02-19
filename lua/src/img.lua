@@ -21,4 +21,6 @@ if resJson["code"] == 1100 then
     else
         --异常
     end
+    end
+    end
 end

@@ -8,7 +8,7 @@ $mycurl->url = "http://api.fengkongcloud.com/v2/saas/anti_fraud/text";
 $postData = array("accessKey"=>"xxxxxxxxxxxxxxxxxxxx", "type"=>"ZHIBO", "data"=>array("tokenId"=>"tokenId_test", "text"=>"iphone 7")); 
 $response = $mycurl->Post($postData);
 print_r($response);
-$resJson = json_decode($response, true)
+$resJson = json_decode($response, true);
 // success
 if ($resJson["code"] == 1100) {
     if ($resJson["riskLevel"] == "PASS") {
