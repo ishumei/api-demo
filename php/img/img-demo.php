@@ -10,3 +10,15 @@ $imgStr = base64_encode($imgContent);
 $postData = array("accessKey"=>"xxxxxxxxxxxxxxxxxxxx", "type"=>"AD", "data"=>array("tokenId"=>"tokenId_test", "img"=>$imgStr)); 
 $response = $mycurl->Post($postData);
 print_r($response);
+// success
+if ($resJson["code"] == 1100) {
+    if ($resJson["riskLevel"] == "PASS") {
+        // 放行
+    } else if ($resJson["riskLevel"] == "REVIEW") {
+	    // 人工审核，如果没有审核，就放行
+    } else if ($resJson["riskLevel"] == "REJECT") {
+	    // 拒绝
+    } else {
+        // 异常
+    }
+}

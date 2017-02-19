@@ -8,3 +8,15 @@ $mycurl->url = "http://api.fengkongcloud.com/v2/saas/register";
 $postData = array("accessKey"=>"XXXXXXXXXXXXXXXXXXX", "data"=>array("registerTime"=>1477033674,"tokenId"=>"tokenId_test", "ip"=>"127.0.0.1")); 
 $response = $mycurl->Post($postData);
 print_r($response);
+// success
+if ($resJson["code"] == 1100) {
+    if ($resJson["riskLevel"] == "PASS") {
+        // 放行
+    } else if ($resJson["riskLevel"] == "REVIEW") {
+	    // 人工审核，如果没有审核，就放行
+    } else if ($resJson["riskLevel"] == "REJECT") {
+	    // 拒绝
+    } else {
+        // 异常
+    }
+}
