@@ -4,15 +4,16 @@ API-DEMO
 # 简介 
 数美提供了以下服务接口
 
-1. text anti_fraud
+1. text (文本反垃圾) 
 
-2. image anti_fraud
+2. img (图片反垃圾)
 
-3. register protection
+3. register (注册保护) 
 
-4. phone label
+4. phonelabel (手机标签)
 
-5. phone risk index
+5. phoneriskindex (手机风险保护)
+
    ......
 
 对于每种服务，我们提供了java, php, go, lua 示例。
