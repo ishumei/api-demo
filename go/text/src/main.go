@@ -1,3 +1,7 @@
+/**
+ * 运行本demo，运行 sh run.sh 即可
+**/
+
 package main
 
 import (
@@ -23,22 +27,29 @@ func main() {
 	hc := httpclient.NewHttpClient(1e9, 1e9)
 	url := "http://api.fengkongcloud.com/v2/saas/anti_fraud/text"
 	//set your own accessKey
-	smtr := ShumeiTextRequest{"xxxxxxxxxxxxxxxxxxxx", "ZHIBO", map[string]interface{}{"tokenId": "tokenId_test", "text": "iphone 7"}}
+	smtr := ShumeiTextRequest{AccessKey: "xxxxxxxxx", Type: "ZHIBO", Data: map[string]interface{}{"tokenId": "tokenId_test", "text": "iphone 7"}}
 	bys, _ := json.Marshal(&smtr)
 	header := map[string]string{"Content-Type": "application/json", "Content-Length": strconv.Itoa(len(string(bys)))}
-	response, err := hc.SendPostRequest(url, header, string(bys))
+
+	response, err := hc.SendPostRequest(url, header, string(bys)) // 发送请求
 	if err != nil {
 		fmt.Println(fmt.Sprintf("Error: %v\n", err))
 		return
 	}
 	fmt.Println(response)
+
 	resJson := ShumeiTextResult{}
 	err = json.Unmarshal([]byte(response), &resJson)
 	if err != nil {
 		fmt.Println(fmt.Sprintf("Error: %v\n", err))
 		return
 	}
-	// success
+
+	/**
+	 * 接口会返回code， code=1100 时说明请求成功，根据不同的 riskLevel 风险级别进行业务处理
+	 * 当 code!=1100 时，如果是 1902 错误，需要检查参数配置
+	 * 其余情况需要根据错误码进行重试或者其它异常处理
+	 */
 	if resJson.Code == 1100 {
 		if resJson.RiskLevel == "PASS" {
 			// 放行
@@ -49,5 +60,7 @@ func main() {
 		} else {
 			// 异常
 		}
+	} else {
+		// 接口请求失败，需要参照返回码进行不同的处理
 	}
 }

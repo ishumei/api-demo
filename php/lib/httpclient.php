@@ -3,6 +3,8 @@ namespace shumei\httpclient;
 
 class SMCurl {
     public $url = "";
+    public $connectTime = 2;
+    public $timeout = 5;
     public function Get() {
         //初始化
         $ch = curl_init();
@@ -20,6 +22,10 @@ class SMCurl {
     public function Post($postData) {
         $data_string = json_encode($postData);
         $ch = curl_init();
+        // 设置超时时间
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $this->connectTime);
+        curl_setopt($ch, CURLOPT_TIMEOUT, $this->timeout);
+
         curl_setopt($ch, CURLOPT_URL, $this->url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         // post数据

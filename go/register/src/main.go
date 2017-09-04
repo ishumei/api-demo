@@ -19,10 +19,10 @@ type ShumeiTextResult struct {
 }
 
 func main() {
-	hc := httpclient.NewHttpClient(1e9, 1e9)
+	hc := httpclient.NewHttpClient(2e9, 5e9)
 	url := "http://api.fengkongcloud.com/v2/saas/register"
 	//set your own accessKey
-	smtr := ShumeiRegisterRequest{"XXXXXXXXXXXXXXXX", map[string]interface{}{"tokenId": "tokenId_test", "registerTime": 1477034623, "ip": "127.0.0.1"}}
+	smtr := ShumeiRegisterRequest{"xxxxxx", map[string]interface{}{"tokenId": "tokenId_test", "registerTime": 1477034623, "ip": "127.0.0.1"}}
 	bys, _ := json.Marshal(&smtr)
 	header := map[string]string{"Content-Type": "application/json", "Content-Length": strconv.Itoa(len(string(bys)))}
 	response, err := hc.SendPostRequest(url, header, string(bys))
@@ -38,7 +38,12 @@ func main() {
 		fmt.Println(fmt.Sprintf("Error: %v\n", err))
 		return
 	}
-	// success
+
+	/**
+	 * 接口会返回code， code=1100 时说明请求成功，根据不同的 riskLevel 风险级别进行业务处理
+	 * 当 code!=1100 时，如果是 1902 错误，需要检查参数配置
+	 * 其余情况需要根据错误码进行重试或者其它异常处理
+	 */
 	if resJson.Code == 1100 {
 		if resJson.RiskLevel == "PASS" {
 			// 放行
@@ -49,5 +54,7 @@ func main() {
 		} else {
 			// 异常
 		}
+	} else {
+		// 接口请求失败，需要参照返回码进行不同的处理
 	}
 }
