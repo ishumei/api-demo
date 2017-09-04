@@ -36,6 +36,7 @@ func getCurrentDir() string {
 	}
 	return strings.Replace(dir, "\\", "/", -1)
 }
+
 func main() {
 	hc := httpclient.NewHttpClient(10e9, 10e9)
 	url := "http://api.fengkongcloud.com/v2/saas/anti_fraud/img"
