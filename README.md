@@ -2,7 +2,6 @@ API-DEMO
 =========
 `api-demo` 提供了一系列样例调用数美服务接口。
 # 简介 
-shumei provides following services:
 数美提供了以下服务接口
 
 1. text anti_fraud
