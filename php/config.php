@@ -18,7 +18,7 @@ define('SM_FINANCE_HOST', 'https://finance-api.fengkongcloud.com');
 /**
  * accessKey 配置 
  */
-define('SM_ACCESSKEY', 'xxxxxxxxxxxxx');
+define('SM_ACCESSKEY', 'xxxxxxxx');
 
 /**
  *  请求具体接口的uri 
@@ -28,3 +28,4 @@ define('IMG_URI', '/v2/saas/anti_fraud/img');
 define('FINANCE_LABEL_URI', '/v2/finance/labels');
 define('FINANCE_MALAGENT_URI', '/v2/finance/malagent');
 define('REGISTER_URI', '/v2/saas/register');
+define('FINANCE_LENDING_URI', '/v3/finance/lending');
