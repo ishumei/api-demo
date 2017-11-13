@@ -29,3 +29,4 @@ define('FINANCE_LABEL_URI', '/v2/finance/labels');
 define('FINANCE_MALAGENT_URI', '/v2/finance/malagent');
 define('REGISTER_URI', '/v2/saas/register');
 define('FINANCE_LENDING_URI', '/v3/finance/lending');
+define('SMS_URI', '/v2/saas/anti_fraud/sms');
