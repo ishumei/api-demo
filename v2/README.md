@@ -1,21 +1,16 @@
 API-DEMO
 =========
 `api-demo` 提供了一系列样例调用数美服务接口。
+
 # 简介 
-数美提供了以下服务接口
+数美提供了以下服务接口，对应语言示例请进入相应目录查看。
 
-1. text (文本反垃圾) 
-
-2. img (图片反垃圾)
-
-3. register (注册保护) 
-
-4. phonelabel (手机标签)
-
-5. phoneriskindex (手机风险保护)
-
-   ......
-
-对于每种服务，我们提供了java, php, go, lua 示例。
-我们后续会提供更多的服务接口，更多的示例及更多的语言支持。
-如果想体验我们的服务，请查看相关的代码。
+| 接口 | 服务 | 接口文档 |
+| --- | --- | --- |
+| audio | 音频文件识别 | [智能音频文件识别](https://www.ishumei.com/help/documents.html?id=21310) |
+| audio_stream | 音频流识别 | [智能音频流识别](https://www.ishumei.com/help/documents.html?id=21510) |
+| event | 天网事件 | [天网场景解决方案](https://www.ishumei.com/help/documents.html?id=22110) |
+| image | 图片识别 | [智能图片识别](https://www.ishumei.com/help/documents.html?id=21210) |
+| text | 文本识别 | [智能文本识别](https://www.ishumei.com/help/documents.html?id=21110) |
+| video | 视频识别 | [智能视频文件识别](https://www.ishumei.com/help/documents.html?id=21410) |
+| video_stream| 视频流识别 | [智能视频流识别](https://www.ishumei.com/help/documents.html?id=21610) |
