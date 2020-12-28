@@ -19,7 +19,7 @@ func main() {
 		"accessKey": accessKey,
 		"appId":     "default",
 		"eventId":   "audio",
-		"type":      "DEFAULT",
+		"type":      "POLITICS_PORN_AD_MOAN",
 		"btId":      btId,
 		"callback":  "https://jsonplaceholder.typicode.com/posts/",
 		"data": map[string]interface{}{

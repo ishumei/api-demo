@@ -11,7 +11,7 @@ public class Audio {
         payload.put("accessKey", ACCESS_KEY);
         payload.put("appId", "default");
         payload.put("eventId", "audio");
-        payload.put("type", "DEFAULT");
+        payload.put("type", "POLITICS_PORN_AD_MOAN");
         payload.put("contentType", "RAW");
         payload.put("content", Utils.readFileToBase64("../files/demo.pcm"));
         payload.put("btId", "{BT_ID}");

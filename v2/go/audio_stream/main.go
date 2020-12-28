@@ -17,7 +17,7 @@ func main() {
 
 	payload := map[string]interface{}{
 		"accessKey": accessKey,
-		"type":      "DEFAULT",
+		"type":      "AD_PORN_POLITICAL_MOAN",
 		"btId":      btId,
 		"appId":     "default",
 		"callback":  "https://jsonplaceholder.typicode.com/posts/",

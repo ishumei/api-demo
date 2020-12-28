@@ -12,7 +12,7 @@ with open(filename, 'rb') as f:
 
 payload = {
     'accessKey': access_key,
-    'type': 'DEFAULT',
+    'type': 'POLITICS_PORN_AD_BEHAVIOR',
     'appId': 'default',
     'data': {
         'img': content.decode('utf-8'),

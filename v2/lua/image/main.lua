@@ -10,7 +10,7 @@ local content = mime.b64(inp:read('*all'))
 
 local payload = json.encode({
   accessKey = accessKey,
-  type = 'DEFAULT',
+  type = 'POLITICS_PORN_AD_BEHAVIOR',
   appId = 'default',
   data = {
     img = content,

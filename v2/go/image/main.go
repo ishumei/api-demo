@@ -19,7 +19,7 @@ func main() {
 	content := base64.StdEncoding.EncodeToString(contentBytes)
 	payload := map[string]interface{}{
 		"accessKey": accessKey,
-		"type":      "DEFAULT",
+		"type":      "POLITICS_PORN_AD_BEHAVIOR",
 		"appId":     "default",
 		"data": map[string]interface{}{
 			"img":     content,

@@ -8,7 +8,7 @@ video_url = 'https://jsonplaceholder.typicode.com/posts/'
 payload = {
     'accessKey': access_key,
     'imgType': 'POLITICS_PORN_AD',
-    'audioType': 'POLITICS_PORN_AD',
+    'audioType': 'NONE',
     'appId': 'default',
     'btId': bt_id,
     'callback': 'https://jsonplaceholder.typicode.com/posts/',

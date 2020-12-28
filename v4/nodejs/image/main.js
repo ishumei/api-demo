@@ -11,7 +11,7 @@ const payload = {
     'accessKey': access_key,
     'appId': 'default',
     'eventId': 'default',
-    'type': 'DEFAULT',
+    'type': 'POLITICS_PORN_AD_BAN',
     'data': {
         'img': content,
         'tokenId': uid,

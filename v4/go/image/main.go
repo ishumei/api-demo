@@ -21,7 +21,7 @@ func main() {
 		"accessKey": accessKey,
 		"appId":     "default",
 		"eventId":   "default",
-		"type":      "DEFAULT",
+		"type":      "POLITICS_PORN_AD_BAN",
 		"data": map[string]interface{}{
 			"img":     content,
 			"tokenId": uid,

@@ -10,7 +10,7 @@ const payload = {
     'accessKey': access_key,
     'appId': 'default',
     'eventId': 'audio',
-    'type': 'DEFAULT',
+    'type': 'POLITICS_PORN_AD_MOAN',
     'btId': bt_id,
     'callback': 'https://jsonplaceholder.typicode.com/posts/',
     'data': {

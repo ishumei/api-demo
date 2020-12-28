@@ -19,7 +19,7 @@ func main() {
 	content := base64.StdEncoding.EncodeToString(contentBytes)
 	payload := map[string]interface{}{
 		"accessKey": accessKey,
-		"type":      "DEFAULT",
+		"type":      "AD_PORN_POLITICAL_MOAN",
 		"appId":     "default",
 		"btId":      btId,
 		"callback":  "https://jsonplaceholder.typicode.com/posts/",
