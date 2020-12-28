@@ -10,7 +10,7 @@ $uid = '{UID}';
 
 $payload = array(
     'accessKey' => $access_key,
-    'type' => 'DEFAULT',
+    'type' => 'AD_PORN_POLITICAL_MOAN',
     'btId' => $bt_id,
     'appId' => 'default',
     'callback' => 'https://jsonplaceholder.typicode.com/posts/',

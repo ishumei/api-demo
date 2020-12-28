@@ -9,7 +9,7 @@ public class AudioStream {
     public static void main(String[] args) {
         HashMap<String, Object> payload = new HashMap<String, Object>();
         payload.put("accessKey", ACCESS_KEY);
-        payload.put("type", "DEFAULT");
+        payload.put("type", "AD_PORN_POLITICAL_MOAN");
         payload.put("appId", "default");
         payload.put("btId", "{BT_ID}");
         payload.put("callback", "https://jsonplaceholder.typicode.com/posts/");

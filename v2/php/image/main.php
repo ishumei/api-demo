@@ -9,7 +9,7 @@ $filename = '../files/demo.png';
 
 $payload = array(
     'accessKey' => $access_key,
-    'type' => 'DEFAULT',
+    'type' => 'POLITICS_PORN_AD_BEHAVIOR',
     'appId' => 'default',
     'data' => array(
         'img' => base64_encode(file_get_contents($filename)),

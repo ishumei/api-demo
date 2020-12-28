@@ -14,7 +14,7 @@ payload = {
     'accessKey': access_key,
     'appId': 'default',
     'eventId': 'audio',
-    'type': 'DEFAULT',
+    'type': 'POLITICS_PORN_AD_MOAN',
     'content': content.decode('utf-8'),
     'contentType': 'RAW',
     'btId': bt_id,

@@ -9,7 +9,7 @@ const filename = '../files/demo.png'
 const content = fs.readFileSync(filename, {encoding: 'base64'})
 const payload = {
     'accessKey': access_key,
-    'type': 'DEFAULT',
+    'type': 'POLITICS_PORN_AD_BEHAVIOR',
     'appId': 'default',
     'data': {
         'img': content,

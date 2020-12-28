@@ -11,7 +11,7 @@ const payload = {
     'accessKey': access_key,
     'appId': 'default',
     'eventId': 'audio',
-    'type': 'DEFAULT',
+    'type': 'POLITICS_PORN_AD_MOAN',
     'contentType': 'RAW',
     'content': content,
     'btId': bt_id,

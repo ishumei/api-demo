@@ -9,7 +9,7 @@ public class Image {
     public static void main(String[] args) {
         HashMap<String, Object> payload = new HashMap<String, Object>();
         payload.put("accessKey", ACCESS_KEY);
-        payload.put("type", "DEFAULT");
+        payload.put("type", "POLITICS_PORN_AD_BEHAVIOR");
         payload.put("appId", "default");
 
         HashMap<String, Object> data = new HashMap<String, Object>();

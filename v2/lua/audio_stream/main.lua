@@ -6,7 +6,7 @@ local accessKey = '{ACCESS_KEY}'
 
 local payload = json.encode({
   accessKey = accessKey,
-  type = 'DEFAULT',
+  type = 'AD_PORN_POLITICAL_MOAN',
   btId = '{BT_ID}',
   appId = 'default',
   callback = 'https://jsonplaceholder.typicode.com/posts/',

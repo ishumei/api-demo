@@ -9,7 +9,7 @@ const filename = '../files/demo.pcm'
 const content = fs.readFileSync(filename, {encoding: 'base64'})
 const payload = {
     'accessKey': access_key,
-    'type': 'DEFAULT',
+    'type': 'AD_PORN_POLITICAL_MOAN',
     'appId': 'default',
     'btId': bt_id,
     'callback': 'https://jsonplaceholder.typicode.com/posts/',

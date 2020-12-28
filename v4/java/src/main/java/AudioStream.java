@@ -11,7 +11,7 @@ public class AudioStream {
         payload.put("accessKey", ACCESS_KEY);
         payload.put("appId", "default");
         payload.put("eventId", "audio");
-        payload.put("type", "DEFAULT");
+        payload.put("type", "POLITICS_PORN_AD_MOAN");
         payload.put("btId", "{BT_ID}");
         payload.put("callback", "https://jsonplaceholder.typicode.com/posts/");
 
