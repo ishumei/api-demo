@@ -2,7 +2,7 @@
 
 require 'lib/utils.php';
 
-$url = 'http://api-audiomessage-bj.fengkongcloud.com/audiomessage/v4';
+$url = 'http://api-audio-sh.fengkongcloud.com/audiomessage/v4';
 $access_key = '{ACCESS_KEY}';
 $filename = '../files/demo.pcm';
 
@@ -10,7 +10,7 @@ $payload = array(
     'accessKey' => $access_key,
     'appId' => 'default',
     'eventId' => 'audio',
-    'type' => 'ALL',
+    'type' => 'POLITY_EROTIC_MOAN_ADVERT',
     'contentType' => 'RAW',
     'content' => base64_encode(file_get_contents($filename)),
     'btId' => $bt_id,

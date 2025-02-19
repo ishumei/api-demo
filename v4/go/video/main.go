@@ -12,18 +12,21 @@ func main() {
 	url := "http://api-video-bj.fengkongcloud.com/video/v4"
 	accessKey := "{ACCESS_KEY}"
 	btId := "{BT_ID}"
+	uid := "{UID}"
+	tokenId := "{TokenId}"
 	videoUrl := "https://jsonplaceholder.typicode.com/posts/"
 
 	payload := map[string]interface{}{
 		"accessKey": accessKey,
 		"appId":     "default",
 		"eventId":   "video",
-		"imgType":   "POLITICS_PORN_AD",
-		"audioType": "POLITICS_PORN_AD",
+		"imgType":   "POLITY_QRCODE_ADVERT",
+		"audioType": "POLITY_EROTIC",
 		"callback":  "https://jsonplaceholder.typicode.com/posts/",
 		"data": map[string]interface{}{
-			"url":  videoUrl,
-			"btId": btId,
+			"url":     videoUrl,
+			"btId":    btId,
+			"tokenId": tokenId,
 		},
 	}
 	b, _ := json.Marshal(payload)

@@ -18,7 +18,7 @@ func main() {
 		"accessKey": accessKey,
 		"appId":     "default",
 		"eventId":   "default",
-		"type":      "ALL",
+		"type":      "TEXTRISK_FRUAD",
 		"data": map[string]string{
 			"text":    text,
 			"tokenId": uid,

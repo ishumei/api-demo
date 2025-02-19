@@ -2,7 +2,7 @@
 
 require 'lib/utils.php';
 
-$url = 'http://api-audiostream-bj.fengkongcloud.com/audiostream/v4';
+$url = 'http://api-audiostream-sh.fengkongcloud.com/audiostream/v4';
 $access_key = '{ACCESS_KEY}';
 $stream_url = '{URL}';
 $bt_id = '{BT_ID}';
@@ -12,12 +12,12 @@ $payload = array(
     'accessKey' => $access_key,
     'appId' => 'default',
     'eventId' => 'audio',
-    'type' => 'POLITICS_PORN_AD_MOAN',
-    'btId' => $bt_id,
+    'type' => 'POLITY_EROTIC_MOAN',
     'callback' => 'https://jsonplaceholder.typicode.com/posts/',
     'data' => array(
         'url' => $stream_url,
         'tokenId' => $uid,
+        'btId' => $bt_id,
     ),
 );
 

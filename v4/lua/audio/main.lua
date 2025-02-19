@@ -2,7 +2,7 @@ local json = require('cjson')
 local mime = require("mime")
 local hc = require('lib.httpclient').new()
 
-local url = 'http://api-audio-bj.fengkongcloud.com/audio/v4'
+local url = 'http://api-audio-sh.fengkongcloud.com/audio/v4'
 local accessKey = '{ACCESS_KEY}'
 
 local inp = assert(io.open('../files/demo.pcm', 'rb'))
@@ -12,7 +12,7 @@ local payload = json.encode({
   accessKey = accessKey,
   appId = 'default',
   eventId = 'audio',
-  type = 'POLITICS_PORN_AD_MOAN',
+  type = 'POLITY_EROTIC_MOAN_ADVERT',
   content = content,
   contentType = 'RAW',
   btId = '{BT_ID}',

@@ -3,7 +3,7 @@ import net.sf.json.JSONObject;
 import java.util.HashMap;
 
 public class AudioStream {
-    private static final String URL = "http://api-audiostream-bj.fengkongcloud.com/audiostream/v4";
+    private static final String URL = "http://api-audiostream-sh.fengkongcloud.com/audiostream/v4";
     private static final String ACCESS_KEY = "{ACCESS_KEY}";
 
     public static void main(String[] args) {
@@ -11,13 +11,14 @@ public class AudioStream {
         payload.put("accessKey", ACCESS_KEY);
         payload.put("appId", "default");
         payload.put("eventId", "audio");
-        payload.put("type", "POLITICS_PORN_AD_MOAN");
+        payload.put("type", "POLITY_EROTIC_MOAN");
         payload.put("btId", "{BT_ID}");
         payload.put("callback", "https://jsonplaceholder.typicode.com/posts/");
 
         HashMap<String, Object> data = new HashMap<String, Object>();
         data.put("url", "{URL}");
         data.put("tokenId", "{UID}");
+        data.put("btId", "{UID}");
 
         payload.put("data", data);
 

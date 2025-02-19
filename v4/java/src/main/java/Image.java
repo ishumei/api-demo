@@ -11,7 +11,7 @@ public class Image {
         payload.put("accessKey", ACCESS_KEY);
         payload.put("appId", "default");
         payload.put("eventId", "default");
-        payload.put("type", "POLITICS_PORN_AD_BAN");
+        payload.put("type", "POLITY_QRCODE_ADVERT");
 
         HashMap<String, Object> data = new HashMap<String, Object>();
         data.put("img", Utils.readFileToBase64("../files/demo.png"));

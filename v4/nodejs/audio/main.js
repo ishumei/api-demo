@@ -1,7 +1,7 @@
 const utils = require('../lib/utils')
 const fs = require('fs')
 
-const url = 'http://api-audio-bj.fengkongcloud.com/audio/v4'
+const url = 'http://api-audio-sh.fengkongcloud.com/audio/v4'
 const access_key = '{ACCESS_KEY}'
 const bt_id = '{BT_ID}'
 const filename = '../files/demo.pcm'
@@ -11,7 +11,7 @@ const payload = {
     'accessKey': access_key,
     'appId': 'default',
     'eventId': 'audio',
-    'type': 'POLITICS_PORN_AD_MOAN',
+    'type': 'POLITY_EROTIC_MOAN_ADVERT',
     'contentType': 'RAW',
     'content': content,
     'btId': bt_id,

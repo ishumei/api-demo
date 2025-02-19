@@ -11,7 +11,7 @@ public class Text {
         payload.put("accessKey", ACCESS_KEY);
         payload.put("appId", "default");
         payload.put("eventId", "default");
-        payload.put("type", "ALL");
+        payload.put("type", "TEXTRISK_FRUAD");
 
         HashMap<String, Object> data = new HashMap<String, Object>();
         data.put("text", "{TEXT}");

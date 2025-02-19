@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	url := "http://api-video-bj.fengkongcloud.com/video/v4"
+	url := "http://api-videostream-sh.fengkongcloud.com/videostream/v4"
 	accessKey := "{ACCESS_KEY}"
 	btId := "{BT_ID}"
 	videoUrl := "https://jsonplaceholder.typicode.com/posts/"
@@ -18,8 +18,8 @@ func main() {
 		"accessKey": accessKey,
 		"appId":     "default",
 		"eventId":   "video",
-		"imgType":   "POLITICS_PORN_AD",
-		"audioType": "POLITICS_PORN_AD",
+		"imgType":   "POLITY_QRCODE_ADVERT",
+		"audioType": "POLITY_EROTIC",
 		"callback":  "https://jsonplaceholder.typicode.com/posts/",
 		"data": map[string]interface{}{
 			"url":        videoUrl,

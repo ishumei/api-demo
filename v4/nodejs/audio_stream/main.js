@@ -1,6 +1,6 @@
 const utils = require('../lib/utils')
 
-const url = 'http://api-audiostream-bj.fengkongcloud.com/audiostream/v4'
+const url = 'http://api-audiostream-sh.fengkongcloud.com/audiostream/v4'
 const access_key = '{ACCESS_KEY}'
 const stream_url = '{URL}'
 const bt_id = '{BT_ID}'
@@ -16,6 +16,7 @@ const payload = {
     'data': {
         'url': stream_url,
         'tokenId': uid,
+        'btId': bt_id,
     }
 }
 

@@ -11,8 +11,8 @@ public class Video {
         payload.put("accessKey", ACCESS_KEY);
         payload.put("appId", "default");
         payload.put("eventId", "video");
-        payload.put("imgType", "POLITICS_PORN_AD");
-        payload.put("audioType", "POLITICS_PORN_AD");
+        payload.put("imgType", "POLITY_QRCODE_ADVERT");
+        payload.put("audioType", "POLITY_EROTIC");
         payload.put("callback", "https://jsonplaceholder.typicode.com/posts/");
 
         HashMap<String, Object> data = new HashMap<String, Object>();

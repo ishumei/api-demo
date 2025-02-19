@@ -11,7 +11,7 @@ const payload = {
     'accessKey': access_key,
     'appId': 'default',
     'eventId': 'default',
-    'type': 'POLITICS_PORN_AD_BAN',
+    'type': 'POLITY_QRCODE_ADVERT',
     'data': {
         'img': content,
         'tokenId': uid,

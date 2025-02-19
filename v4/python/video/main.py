@@ -3,18 +3,20 @@ import requests
 url = 'http://api-video-bj.fengkongcloud.com/video/v4'
 access_key = '{ACCESS_KEY}'
 bt_id = '{BT_ID}'
+tokenId = '{Token_Id}'
 video_url = 'https://jsonplaceholder.typicode.com/posts/'
 
 payload = {
     'accessKey': access_key,
     'appId': 'default',
     'eventId': 'video',
-    'imgType': 'POLITICS_PORN_AD',
-    'audioType': 'POLITICS_PORN_AD',
+    'imgType': 'POLITY_QRCODE_ADVERT',
+    'audioType': 'POLITY_EROTIC',
     'callback': 'https://jsonplaceholder.typicode.com/posts/',
     'data': {
         'url': video_url,
         'btId': bt_id,
+        'tokenId': tokenId,
     },
 }
 

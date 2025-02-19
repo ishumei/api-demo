@@ -3,7 +3,7 @@ import net.sf.json.JSONObject;
 import java.util.HashMap;
 
 public class AudioMessage {
-    private static final String URL = "http://api-audiomessage-bj.fengkongcloud.com/audiomessage/v4";
+    private static final String URL = "http://api-audio-sh.fengkongcloud.com/audiomessage/v4";
     private static final String ACCESS_KEY = "{ACCESS_KEY}";
 
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class AudioMessage {
         payload.put("accessKey", ACCESS_KEY);
         payload.put("appId", "default");
         payload.put("eventId", "audio");
-        payload.put("type", "ALL");
+        payload.put("type", "POLITY_EROTIC_MOAN_ADVERT");
         payload.put("content", Utils.readFileToBase64("../files/demo.pcm"));
         payload.put("contentType", "RAW");
         payload.put("btId", "{BT_ID}");
