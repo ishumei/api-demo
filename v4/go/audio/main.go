@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	url := "http://api-audio-bj.fengkongcloud.com/audio/v4"
+	url := "http://api-audio-sh.fengkongcloud.com/audio/v4"
 	accessKey := "{ACCESS_KEY}"
 	btId := "{BT_ID}"
 	filename := "../files/demo.pcm"
@@ -21,7 +21,7 @@ func main() {
 		"accessKey":   accessKey,
 		"appId":       "default",
 		"eventId":     "audio",
-		"type":        "POLITICS_PORN_AD_MOAN",
+		"type":        "POLITY_EROTIC_MOAN_ADVERT",
 		"content":     content,
 		"contentType": "RAW",
 		"btId":        btId,

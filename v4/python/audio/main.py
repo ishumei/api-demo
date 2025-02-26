@@ -2,7 +2,7 @@ import base64
 
 import requests
 
-url = 'http://api-audio-bj.fengkongcloud.com/audio/v4'
+url = 'http://api-audio-sh.fengkongcloud.com/audio/v4'
 access_key = '{ACCESS_KEY}'
 bt_id = '{BT_ID}'
 filename = '../files/demo.pcm'
@@ -14,7 +14,7 @@ payload = {
     'accessKey': access_key,
     'appId': 'default',
     'eventId': 'audio',
-    'type': 'POLITICS_PORN_AD_MOAN',
+    'type': 'POLITY_EROTIC_MOAN_ADVERT',
     'content': content.decode('utf-8'),
     'contentType': 'RAW',
     'btId': bt_id,

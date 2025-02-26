@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	url := "http://api-audiostream-bj.fengkongcloud.com/audiostream/v4"
+	url := "http://api-audiostream-sh.fengkongcloud.com/audiostream/v4"
 	accessKey := "{ACCESS_KEY}"
 	streamUrl := "{URL}"
 	btId := "{BT_ID}"
@@ -19,12 +19,12 @@ func main() {
 		"accessKey": accessKey,
 		"appId":     "default",
 		"eventId":   "audio",
-		"type":      "POLITICS_PORN_AD_MOAN",
-		"btId":      btId,
+		"type":      "POLITY_EROTIC_MOAN",
 		"callback":  "https://jsonplaceholder.typicode.com/posts/",
 		"data": map[string]interface{}{
 			"url":     streamUrl,
 			"tokenId": uid,
+			"btId":    btId,
 		},
 	}
 	b, _ := json.Marshal(payload)

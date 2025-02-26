@@ -9,8 +9,8 @@ const payload = {
     'accessKey': access_key,
     'appId': 'default',
     'eventId': 'video',
-    'imgType': 'POLITICS_PORN_AD',
-    'audioType': 'POLITICS_PORN_AD',
+    'imgType': 'POLITY_QRCODE_ADVERT',
+    'audioType': 'POLITY_EROTIC',
     'callback': 'https://jsonplaceholder.typicode.com/posts/',
     'data': {
         'url': video_url,

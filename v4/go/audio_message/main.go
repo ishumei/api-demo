@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	url := "http://api-audiomessage-bj.fengkongcloud.com/audiomessage/v4"
+	url := "http://api-audio-sh.fengkongcloud.com/audiomessage/v4"
 	accessKey := "{ACCESS_KEY}"
 	btId := "{BT_ID}"
 	filename := "../files/demo.pcm"
@@ -21,11 +21,10 @@ func main() {
 		"accessKey":   accessKey,
 		"appId":       "default",
 		"eventId":     "audio",
-		"type":        "ALL",
+		"type":        "POLITY_EROTIC_MOAN_ADVERT",
 		"content":     content,
 		"contentType": "RAW",
 		"btId":        btId,
-		"callback":    "https://jsonplaceholder.typicode.com/posts/",
 		"data": map[string]interface{}{
 			"format": "pcm",
 			"rate":   8000,

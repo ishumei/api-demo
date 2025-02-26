@@ -2,7 +2,7 @@
 
 require 'lib/utils.php';
 
-$url = 'http://api-video-bj.fengkongcloud.com/video/v4';
+$url = 'http://api-videostream-sh.fengkongcloud.com/videostream/v4';
 $access_key = '{ACCESS_KEY}';
 $bt_id = '{BT_ID}';
 $video_url = 'https://jsonplaceholder.typicode.com/posts/';
@@ -11,8 +11,8 @@ $payload = array(
     'accessKey' => $access_key,
     'appId' => 'default',
     'eventId' => 'video',
-    'imgType' => 'POLITICS_PORN_AD',
-    'audioType' => 'POLITICS_PORN_AD',
+    'imgType' => 'POLITY_QRCODE_ADVERT',
+    'audioType' => 'POLITY_EROTIC',
     'callback' => 'https://jsonplaceholder.typicode.com/posts/',
     'data' => array(
         'url' => $video_url,

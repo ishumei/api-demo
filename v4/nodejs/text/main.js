@@ -9,7 +9,7 @@ const payload = {
     'accessKey': access_key,
     'appId': 'default',
     'eventId': 'default',
-    'type': 'ALL',
+    'type': 'TEXTRISK_FRUAD',
     'data': {
         'text': text,
         'tokenId': uid,

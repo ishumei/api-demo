@@ -1,19 +1,19 @@
 local json = require('cjson')
 local hc = require('lib.httpclient').new()
 
-local url = 'http://api-audiostream-bj.fengkongcloud.com/audiostream/v4'
+local url = 'http://api-audiostream-sh.fengkongcloud.com/audiostream/v4'
 local accessKey = '{ACCESS_KEY}'
 
 local payload = json.encode({
   accessKey = accessKey,
   appId = 'default',
   eventId = 'audio',
-  type = 'POLITICS_PORN_AD_MOAN',
-  btId = '{BT_ID}',
+  type = 'POLITY_EROTIC_MOAN',
   callback = 'https://jsonplaceholder.typicode.com/posts/',
   data = {
     url = '{URL}',
     tokenId = '{UID}',
+    btId = '{BT_ID}',
   }
 })
 

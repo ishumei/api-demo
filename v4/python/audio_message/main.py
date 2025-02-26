@@ -2,7 +2,7 @@ import base64
 
 import requests
 
-url = 'http://api-audiomessage-bj.fengkongcloud.com/audiomessage/v4'
+url = 'http://api-audio-sh.fengkongcloud.com/audiomessage/v4'
 access_key = '{ACCESS_KEY}'
 bt_id = '{BT_ID}'
 filename = '../files/demo.pcm'

@@ -1,6 +1,6 @@
 import requests
 
-url = 'http://api-audiostream-bj.fengkongcloud.com/audiostream/v4'
+url = 'http://api-audiostream-sh.fengkongcloud.com/audiostream/v4'
 access_key = '{ACCESS_KEY}'
 stream_url = '{URL}'
 bt_id = '{BT_ID}'
@@ -10,12 +10,13 @@ payload = {
     'accessKey': access_key,
     'appId': 'default',
     'eventId': 'audio',
-    'type': 'POLITICS_PORN_AD_MOAN',
+    'type': 'POLITY_EROTIC_MOAN',
     'btId': bt_id,
     'callback': 'https://jsonplaceholder.typicode.com/posts/',
     'data': {
         'url': stream_url,
         'tokenId': uid,
+        'btId': bt_id,
     }
 }
 
