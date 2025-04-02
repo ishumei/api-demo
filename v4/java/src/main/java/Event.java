@@ -5,8 +5,7 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 
 public class Event {
-    //    private static final String URL = "http://api-skynet-bj.fengkongcloud.com";
-    private static final String URL = "http://url/v4/event";
+    private static final String URL = "http://api-skynet-bj.fengkongcloud.com/v4/event";
     private static final String ACCESSKEY = "{accesskey}";
 
 
